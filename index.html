@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Warteg Pakde Jason - masakan rumahan, harga bersahabat, siap antar dan ambil sendiri." />
+    <title>Warteg Pakde Jason</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <nav class="navbar container" aria-label="Navigasi utama">
+        <a href="#home" class="brand" aria-label="Warteg Pakde Jason">
+          <span class="brand-mark">WK</span>
+          <div class="brand-text">
+            <strong>Warteg Pakde Jason</strong>
+            <small>Masakan rumahan, harga bersahabat</small>
+          </div>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Buka menu navigasi" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-links" id="navMenu">
+          <a href="#home">Beranda</a>
+          <a href="#menu">Menu</a>
+          <a href="#why">Kenapa Kami</a>
+          <a href="#testimoni">Testimoni</a>
+          <a href="#lokasi">Lokasi</a>
+        </div>
+
+        <button class="cart-button" id="cartToggle" type="button" aria-label="Buka keranjang belanja">
+          <span class="cart-icon">🛒</span>
+          <span class="cart-badge" id="cartCount">0</span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="container hero-inner">
+          <div class="hero-copy reveal">
+            <span class="eyebrow">Warteg favorit keluarga</span>
+            <h1>Rasa rumah, harga yang ramah untuk setiap hari.</h1>
+            <p class="subtitle">Masakan rumahan, harga bersahabat</p>
+
+            <div class="hero-meta">
+              <div class="meta-pill">
+                <span>⏰</span>
+                <span>Setiap hari, 07.00 - 21.00 WIB</span>
+              </div>
+              <div class="meta-pill status-pill">
+                <span class="status-dot" id="statusDot"></span>
+                <span id="storeStatus">Buka</span>
+              </div>
+            </div>
+
+            <div class="hero-actions">
+              <a href="#menu" class="primary-btn">Pesan Sekarang</a>
+              <a href="https://wa.me/6281234567890" class="secondary-btn" target="_blank" rel="noreferrer">Chat WhatsApp</a>
+            </div>
+
+            <div class="service-points">
+              <span>✔ Antar radius 3 km</span>
+              <span>✔ Ongkir Rp5.000</span>
+              <span>✔ Tunai / QRIS / transfer</span>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal">
+            <div class="showcase-card">
+              <img src="assets/ayamgoreng_sayurlodeh.jpg" alt="Menu warteg khas Indonesia" />
+              <div class="floating-note note-top">
+                <strong>Menu paling laris</strong>
+                <span>Ayam Goreng + Sayur Lodeh</span>
+              </div>
+              <div class="floating-note note-bottom">
+                <strong>Antar cepat</strong>
+                <span>Radius 3 km, dari jam 07.00-21.00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu-section reveal" id="menu">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Menu kami</span>
+            <h2>Pilihan favorit warteg</h2>
+          </div>
+
+          <div class="menu-toolbar">
+            <div class="category-filter" id="categoryFilter" aria-label="Filter kategori menu">
+              <button class="filter-btn active" type="button" data-category="Semua">Semua</button>
+              <button class="filter-btn" type="button" data-category="Lauk">Lauk</button>
+              <button class="filter-btn" type="button" data-category="Sayur">Sayur</button>
+              <button class="filter-btn" type="button" data-category="Nasi">Nasi</button>
+              <button class="filter-btn" type="button" data-category="Minuman">Minuman</button>
+            </div>
+
+            <label class="search-box" for="menuSearch">
+              <span>🔎</span>
+              <input id="menuSearch" type="search" placeholder="Cari menu favorit..." aria-label="Cari menu" />
+            </label>
+          </div>
+
+          <div class="menu-grid" id="menuGrid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="reasons reveal" id="why">
+        <div class="container">
+          <div class="section-heading center">
+            <span class="eyebrow">Kenapa pilih kami</span>
+            <h2>Masakan rumah dengan rasa yang familier</h2>
+          </div>
+
+          <div class="reason-grid">
+            <article class="reason-card">
+              <div class="reason-icon">🥘</div>
+              <h3>Masakan rumahan</h3>
+              <p>Semua hidangan dibuat dengan bumbu sederhana dan rasa yang terasa seperti rumah.</p>
+            </article>
+
+            <article class="reason-card">
+              <div class="reason-icon">💰</div>
+              <h3>Harga bersahabat</h3>
+              <p>Menu yang sehat, nikmat, dan tetap terjangkau untuk kebutuhan harian keluarga.</p>
+            </article>
+
+            <article class="reason-card">
+              <div class="reason-icon">🚚</div>
+              <h3>Antar cepat</h3>
+              <p>Pesanan sampai cepat di radius 3 km tanpa proses yang berbelit-belit.</p>
+            </article>
+
+            <article class="reason-card">
+              <div class="reason-icon">📍</div>
+              <h3>Lokasi mudah dijangkau</h3>
+              <p>Strategis untuk pelanggan yang ingin ambil sendiri atau pesan antar dengan mudah.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials reveal" id="testimoni">
+        <div class="container">
+          <div class="section-heading center">
+            <span class="eyebrow">Ulasan pelanggan</span>
+            <h2>Yang mereka bilang</h2>
+          </div>
+
+          <div class="testimonial-grid">
+            <article class="testimonial-card">
+              <div class="stars">★★★★★</div>
+              <p>“Nasi dan lauknya selalu konsisten. Rasanya seperti masakan ibu, dan harganya tetap ramah di kantong.”</p>
+              <div class="person">
+                <strong>Rina</strong>
+                <span>Customer Jakarta</span>
+              </div>
+            </article>
+
+            <article class="testimonial-card">
+              <div class="stars">★★★★★</div>
+              <p>“Suka banget dengan sayur lodeh dan ayam gorengnya. Antar juga cepat dan aman.”</p>
+              <div class="person">
+                <strong>Budi</strong>
+                <span>Pelanggan tetap</span>
+              </div>
+            </article>
+
+            <article class="testimonial-card">
+              <div class="stars">★★★★★</div>
+              <p>“Benar-benar cocok buat makan siang. Bumbu terasa asli dan porsinya pas untuk satu keluarga.”</p>
+              <div class="person">
+                <strong>Sari</strong>
+                <span>Pengguna baru</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="location reveal" id="lokasi">
+        <div class="container location-grid">
+          <div class="location-card">
+            <span class="eyebrow">Lokasi & jam</span>
+            <h2>Datang langsung atau pesan antar</h2>
+            <ul class="location-list">
+              <li><strong>Alamat:</strong> Jl. Contoh No. 12, Jakarta</li>
+              <li><strong>Jam buka:</strong> Setiap hari, 07.00 - 21.00 WIB</li>
+              <li><strong>Antar:</strong> Radius 3 km, ongkir Rp5.000</li>
+              <li><strong>Ambil sendiri:</strong> Tersedia</li>
+              <li><strong>Metode bayar:</strong> Tunai, QRIS, transfer</li>
+            </ul>
+          </div>
+
+          <a class="map-placeholder" href="https://maps.app.goo.gl/EaygqMK31gJRebNt9" target="_blank" rel="noreferrer" aria-label="Buka lokasi Warteg Pakde Jason di Google Maps">
+            <div class="map-pin">📍</div>
+            <p>Warteg Pakde Jason</p>
+            <small>Jl. Contoh No. 12, Jakarta</small>
+            <span class="map-link-text">Lihat lokasi</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <h3>Warteg Pakde Jason</h3>
+          <p>Masakan rumahan, harga bersahabat.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#menu">Menu</a>
+          <a href="#why">Kenapa Kami</a>
+          <a href="#lokasi">Lokasi</a>
+        </div>
+        <div class="footer-contact">
+          <a href="https://wa.me/6281234567890" target="_blank" rel="noreferrer">WhatsApp</a>
+          <span>© 2026 Warteg Pakde Jason</span>
+        </div>
+      </div>
+    </footer>
+
+    <a class="floating-wa" href="https://wa.me/6281234567890" target="_blank" rel="noreferrer" aria-label="Chat WhatsApp">WhatsApp</a>
+
+    <div class="overlay" id="cartOverlay"></div>
+
+    <aside class="cart-drawer" id="cartDrawer" aria-label="Keranjang belanja">
+      <div class="cart-header">
+        <h3>Keranjang Saya</h3>
+        <button type="button" class="close-cart" id="closeCart" aria-label="Tutup keranjang">✕</button>
+      </div>
+
+      <div class="cart-body">
+        <div class="cart-empty" id="cartEmpty">
+          <div class="empty-icon">🛒</div>
+          <p>Keranjang masih kosong</p>
+          <small>Tambahkan menu favorit Anda dulu.</small>
+        </div>
+
+        <ul class="cart-items" id="cartItems"></ul>
+
+        <div class="cart-summary">
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <strong id="subtotalValue">Rp0</strong>
+          </div>
+          <div class="summary-row">
+            <span>Ongkir</span>
+            <strong id="shippingValue">Rp0</strong>
+          </div>
+          <div class="summary-row total-row">
+            <span>Total</span>
+            <strong id="totalValue">Rp0</strong>
+          </div>
+        </div>
+      </div>
+
+      <form id="checkoutForm" novalidate>
+        <div class="field">
+          <label for="customerName">Nama</label>
+          <input id="customerName" name="customerName" type="text" placeholder="Masukkan nama Anda" />
+          <small class="error-message"></small>
+        </div>
+
+        <div class="field">
+          <label for="customerPhone">Nomor HP</label>
+          <input id="customerPhone" name="customerPhone" type="tel" placeholder="08xxxxxxxxxx" />
+          <small class="error-message"></small>
+        </div>
+
+        <div class="field">
+          <label for="orderType">Tipe pesanan</label>
+          <select id="orderType" name="orderType">
+            <option value="Ambil Sendiri">Ambil Sendiri</option>
+            <option value="Antar">Antar</option>
+          </select>
+          <small class="error-message"></small>
+        </div>
+
+        <div class="field" id="addressFieldWrapper" hidden>
+          <label for="deliveryAddress">Alamat lengkap</label>
+          <textarea id="deliveryAddress" name="deliveryAddress" rows="3" placeholder="Jl. Contoh No. 12, Jakarta"></textarea>
+          <small class="error-message"></small>
+        </div>
+
+        <div class="field">
+          <label for="paymentMethod">Metode pembayaran</label>
+          <select id="paymentMethod" name="paymentMethod">
+            <option value="Tunai">Tunai</option>
+            <option value="QRIS">QRIS</option>
+            <option value="Transfer">Transfer</option>
+          </select>
+          <small class="error-message"></small>
+        </div>
+
+        <div class="field">
+          <label for="customerNote">Catatan</label>
+          <textarea id="customerNote" name="customerNote" rows="3" placeholder="Contoh: tanpa pedas, nasi tambah, dll."></textarea>
+          <small class="error-message"></small>
+        </div>
+
+        <button type="submit" class="checkout-btn">Pesan via WhatsApp</button>
+      </form>
+    </aside>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
