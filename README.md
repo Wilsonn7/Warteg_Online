@@ -1,2 +1,1 @@
 Warteg Online
-Good morning
